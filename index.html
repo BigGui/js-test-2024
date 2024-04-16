@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <header id="header">
+
+        <img src="" alt="logo">
+        <h1 id="main-title">Hello World</h1>
+        <nav>
+            <ul>
+                <li class="nav__itm"><a href="#">Home</a></li>
+                <li class="nav__itm"><a href="#">Contact</a></li>
+                <li class="nav__itm"><a href="#">Work</a></li>
+                <li class="nav__itm">
+                    <button id="nav-cta" type="button" data-text-onclick="Je suis cliqué !">
+                        Réserver
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div data-src="">
+        <button type="button" data-open-id="contact-form" data-closed-text="Fermer le formulaire">
+            Ouvrir le formulaire
+        </button>
+
+        <form action="" method="get" id="contact-form" class="hidden">
+            <ul>
+                <li><input type="text" name="truc" id=""></li>
+                <li><input class="js-input-machin form__ipt-new form__ipt-new--machin" type="text" name="machin"
+                        id="machin"></li>
+                <li><input type="text" name="aze" id=""></li>
+                <li><input type="text" name="aeze" id=""></li>
+                <li><input type="text" name="ezeg" id=""></li>
+            </ul>
+        </form>
+    </div>
+
+
+    <button type="button" id="add-product">
+        Ajouter un produit
+    </button>
+    <ul id="product-list"></ul>
+
+
+    <template id="productTemplate">
+        <li class="product__itm">
+            <button type="button" class="js-remove">-</button>
+            <h3 class="product__ttl js-ttl">Titre</h3>
+            <img class="product__img js-img" src="source.jpg" alt="alt text'">
+            <div>12,30 €</div>
+            <button type="button" class="js-add-to-cart">Ajouter au panier</button>
+        </li>
+    </template>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
