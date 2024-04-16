@@ -145,9 +145,9 @@ function addProduct(productData) {
     productElement.querySelector('.js-ttl').innerText = productData.name;
     productElement.querySelector('.js-img').src = productData.imageUrl;
     productElement.querySelector('.js-img').setAttribute('alt', productData.imageAlt);
-    
+
     productElement.querySelector('.js-remove').remove();
-    
+
     document.querySelector('#product-list').appendChild(productElement);
 }
 
@@ -171,6 +171,19 @@ const products = [
 
 console.table(products);
 
+// document.querySelector("#add-product")
+//     .addEventListener('click', () => addProduct(products.shift()));
 
-document.querySelector("#add-product")
-    .addEventListener('click', () => addProduct(products.shift()));
+const productList = document.querySelector("#add-product");
+
+function addNextProductToList() {
+
+    if (products.length < 1) {
+        productList.removeEventListener('click', addNextProductToList);
+        return;
+    }
+
+    addProduct(products.shift());
+}
+
+productList.addEventListener('click', addNextProductToList);
